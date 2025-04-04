@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Absolute</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            border: 2px solid black;
+            width: 350px;
+            height: 120px;
+            margin: 5px;
+            padding: 8px;
+        }
+
+        .box1{
+            background-color: yellow;
+            /* position: relative; */
+            /* sika mtlb box kahi bhi ove kr skta hai */
+            /* position: relative;
+            /* z-index: 2;  */
+
+            /* position: absolute;
+            top: 0px;
+            left: 40px; */
+            /* agar parent me position naoi hai to wo html me kahi bhi move kr skta hai 
+
+            agar parent me position absolute hai
+            to wo us parent ke andar ke box me hi move kr skta hai uske bahar nai
+            jaise ki uper top o hai fir bhi wo box ke bahar nai gya aagr postion relatiove hoti to wo top pe vhala gya hota */
+
+            position: sticky;
+            top: 0px;
+            width: 50%;
+            height: 111px;
+            margin: 0;
+            padding: 0;
+            /* isse hoga ye ki site ko neeche scroll bhi krenge to boxuper hi rhega like a heading */
+            }
+
+        .box2{
+            background-color: lightblue;
+
+            /* position: relative; */
+            /* sika mtlb box kahi bhi ove kr skta hai*/
+
+            /* top: -50px; */
+            /* isse uper neeche hoga box  */
+
+            /* left: 50px; */
+            /* isse lefyt right hoga box  */
+
+            /* position: relative;  */
+            /* z-index: 2; */
+
+            /* dono box me se jiska z index jyada hoga wo uske uper show krega jaise ki box1 me dekh  */
+            /* z index apply krne ke liye uss box me pehle position apply krni pdegi  */
+        }
+        .box3{
+            background-color: gray;
+            /* position: fixed;
+            margin: -10vw;
+            left: 40vw; */
+            /* isse hota ye hai ki agar zoom krenge fixed krke or  move krenge to box apni jagah par hi rhega wo move nai krega kind of blocker  */
+        }
+        .box4{
+            background-color: aqua;
+        }
+
+        .parent{
+            border: 3px solid gray;
+            margin: 40px;
+            padding: 60px;
+            /* position: absolute;  */
+
+            
+            /* Exception: transform, filter, or perspective properties can also make an element appear as positioned */
+            /* transform: translate(0); */
+            /* filter: invert(0); */
+            /* perspective: 0em; */
+            /* these can also work like position  */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+    </div>
+</body>
+</html>

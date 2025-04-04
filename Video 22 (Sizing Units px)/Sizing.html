@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing Units</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        .box {
+            border: 2px solid black;
+            background-color: bisque;
+            /* width: 1920px; */
+            /* Ye unit specific monitor ke liye use krenge */
+            /* width: 100vw; */
+            /* (VW=Viewport Width )ye globally saare monitors ke hisaab se apne aap screen ki size ke hisaab se aa jaayega fit */
+            width: 80vw;
+            margin: auto;
+            /* Ye right aur left ke margin ko equal kr dega aur box ko center me le aayega *Apply for only block elements */
+            height: 10vh;
+            /* Means 10% height of viewport(vw) */
+        }
+
+        .container {
+
+            box-sizing: border-box;
+            border: 2px solid black;
+            background-color: bisque;
+            width: 80vw;
+            /* height: 80vh; */
+            font-size: 18px;
+            margin: 22px auto;
+            min-height: 80vh;
+            /* iska mtlb jitna bhi content daloge isme wo border se bahar nai jaayega */
+        }
+
+        .container p {
+
+            width: 50%;
+            font-size: 1.5em;
+            /* em ka mtlb jo size apan uper denge px me aur jo em me denge to wo usse multiply ho jaayegi jaise 2 em hai aur 18px to 18into2 ho jaayega mtlb 36px ho jaaayegi size agr 1.5 em ho to 18into1.5 mtlb 27px ho jaayegi size  */
+            /* font-size: 2rem; */
+            /* ye rem unit html me apply hogi class me nai 
+            aur *em class aur html dono me apply ho jati hai */
+        }
+
+        .red {
+            box-sizing: border-box;
+            border: 2px solid black;
+            background-color: red;
+            color: yellow;
+            margin: 22px auto;
+            /* width: 100vmin; */
+            width: 80vw;
+            /* same as vh(viewheight) vh likho ya vmin same hai dono
+            vmin se hota ye  hai ki ye comp. ke liye vh(height) hoti hai aur mobiles ke liye vw(width) */
+            /* width: 100vmax; */
+            /* mtlb comp. me vw aur phone me vh  */
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units -->
+    <!-- can find units here  -->
+    <div class="box">
+        this is a box
+    </div>
+
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt sint rerum illo saepe placeat repudiandae
+            nostrum delectus ex fuga, pariatur praesentium nemo ratione.
+        </p>
+    </div>
+
+    <div class="red">
+        Its a class
+    </div>
+</body>
+
+</html>

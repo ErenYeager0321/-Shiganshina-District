@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specifity</title>
+    <style>
+        /* Specificity Calculation To calculate specificity,
+        assign a value to each part of the selector: Universal Selector: 0
+         Element selectors and pseudo-elements: 1 
+        Class selectors,attribute selectors,and pseudo-classes: 10 
+        ID selectors: 100 Inline styles: 1000  */
+
+        /* The Specifity of this selector is 1 */
+        h1 {
+            color: white;
+        }
+ /* The Specifity of this selector is 10 */
+        .yellow {
+            color: yellow;
+        }
+ /* The Specifity of this selector is 10 */
+        .red {
+            color: red;
+        }
+        [data-X="a"]{
+            color: rgb(243, 7, 7);
+        }
+ /* The Specifity of this selector is 10 */
+        .green {
+            color: rgb(47, 160, 47);
+        }
+        /* INN Chaaro me last wale ko priority miegi chahe beech me Attribute selector kyuu na ho  */
+
+        h2 {
+            color: white;
+        }
+ /* The Specifity of this selector is 10 */
+ /* The Specifity of this selector is 1+10=11 */
+ /* Ab isko priority milegi */
+        h2.yellow {
+            color: yellow;
+        }
+ /* The Specifity of this selector is 10 */
+        .red {
+            color: red;
+        }
+        [data-X="a"]{
+            color: rgb(243, 7, 7);
+        }
+ /* The Specifity of this selector is 10 */
+        .green {
+            color: rgb(47, 160, 47);
+        }
+
+        /* The specificity of this selector is 1(Element) + 10(Class) + 10(Class) + 10(Attribute hre) + 10(Pseudo Class) = 41  */
+         a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+
+
+ /* The Specifity of this selector is 10 */
+        /* [data-X="a"]{
+            color:red;
+            background-color: yellow;
+        } 
+         Attribute selector hai ye   */
+
+
+
+
+        /* Color Choose Cascade Algorithm Se HoGA The Cascade Algorithm CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It's the reason that the text of the button styled with the above CSS will be purple.
+
+        Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm has 4 distinct stages.
+
+        Position and order of appearance: the order in which your CSS rules appear 
+
+        Specificity: an algorithm that determines which CSS selector has the strongest match 
+
+        Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension,or your authored CSS 
+
+        Importance: some CSS rules are weighted more heavily than others,
+
+        especially with the !important rule type Lets look into all these one by one   */
+    </style>
+</head>
+
+<body>
+    <h1  class="yellow red green" data-X="a" ATTRIBUTE SELECTOR HAI>CSS Specifity</h1>
+    <!-- style="color: blue; ye INLINE Selector hai isko apply krenge to importance isko milegi sbse jyada
+     data-X="a" ATTRIBUTE SELECTOR HAI YE Attribute Selector hai lekin isko importance class ki tarah hi milegi -->
+    <h2  class="yellow red green" data-X="a" ATTRIBUTE SELECTOR HAI>CSS Specifity</h2>
+</body>
+
+</html>

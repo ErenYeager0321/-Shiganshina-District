@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .box {
+            background-color: chartreuse;
+        }
+
+        .box1 {
+            color: red;
+            margin: 25px;
+            /* MARGIN BORDER KE BAHAR APPLY HOTI HAI  */
+            padding: 80px;
+            border: 2px solid red;
+            height: 200px;
+            /* HEIGHT SIRF BORDER KE ANDAR APPLY HOGI  */
+            box-sizing: border-box;
+        }
+
+        .box2 {
+            color: yellow;
+            color: red;
+            margin: 25px;
+            /* MARGIN BORDER KE BAHAR APPLY HOTI HAI  */
+            padding: 80px;
+            border: 2px solid red;
+            height: 200px;
+            /* HEIGHT SIRF BORDER KE ANDAR APPLY HOGI  */
+            box-sizing: border-box;
+        }
+
+        DONO BOX KE BEECH ME SIRF 25PX KI SPACE HAI KYUKI UDHAR MARGIN COLLAPSE HO JATA HAI AGAR EK BOX KA 35 HOTI MARGIN TO BEECHE KI SPACE 35 HOTI img {
+            margin: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center;" class="box box1">Its A Box</div>
+    <div style="text-align: center;" class="box box2">Its A Another Box</div>
+    <img src="box model.png" height="300" alt="Box Model">
+</body>
+
+</html>

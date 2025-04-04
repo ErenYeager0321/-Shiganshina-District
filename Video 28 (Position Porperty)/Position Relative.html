@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            border: 2px solid black;
+            width: 150px;
+            height: 120px;
+            margin: 5px;
+            padding: 8px;
+        }
+
+        .box1{
+            background-color: yellow;
+            position: relative;
+            /* sika mtlb box kahi bhi ove kr skta hai */
+            position: relative;
+            z-index: 2;
+        }
+        .box2{
+            background-color: lightblue;
+
+            /* position: relative; */
+            /* sika mtlb box kahi bhi ove kr skta hai  */
+            top: -50px;
+            /* isse uper neeche hoga box  */
+            left: 50px;
+            /* isse lefyt right hoga box  */
+            position: relative;
+            /* z-index: 2; */
+            /* dono box me se jiska z index jyada hoga wo uske uper show krega jaise ki box1 me dekh  */
+            /* z index apply krne ke liye uss box me pehle position apply krni pdegi  */
+
+        }
+        .box3{
+            background-color: gray;
+        }
+        .box4{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box{
+            border: 2px solid black;
+            /* display: inline;  */
+            display: inline-block; 
+            width: 255PX;
+            margin: 10px;
+            padding: 35px;
+            /* Text NEECHE NAI AAYEGA KYUKI YE MARGIN OR PADDING APPLY NAI HOGI APPLY KRNE KE LIYE INLINE BLOCK AALNA PDEGA          */
+        }
+
+        .box1{
+             /* display: none; */
+            visibility: hidden; 
+            /* display none se hota ye hai ki box hat jaayega aur space bhi chale jaayegi lelkin visiblility hidden krne se aur display none hatane se box hat bhi jaayega aur space bhi chodh dega */
+
+             border: 2px solid black;
+            width: 25PX;
+            margin: 10px;
+            padding: 35px; 
+        } 
+    </style>
+</head>
+<body>
+    <div class="box">
+        i am a box
+    </div>
+    <div class="box1">
+        i am another box2
+   </div>
+    <div class="box">
+         i am another box
+    </div>
+  
+    <!-- Boith Are Block Elements But Can Make Inline Element BY Adding diaplay="inline" this in style  -->
+   
+    <span>its something</span>
+    <span>else</span>
+    <!-- both are inline element to donoek hi line me aayenge -->
+</body>
+</html>

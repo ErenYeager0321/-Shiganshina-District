@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <STYle>
+        /* Element selector */
+        div {
+            background-color: yellow;
+        }
+
+        /* Class Selector */
+        .red {
+            background-color: aquamarine;
+        }
+
+        /* ID SELECTOR */
+        #PINK {
+            background-color: hotpink;
+        }
+
+        /* CHILD SELECTOR */
+        div>p {
+            background-color: lightgray;
+            /* iska mtlb hai ki div ke baad jop first child p hoga sirf uspe apply hoga ye  */
+        }
+
+        /* DESCENDENT SELECTOR */
+        div p {
+            background-color: lightseagreen;
+            color: black;
+            /* iska mtlb hota hai ki p div me chahe jaha ho uspe sb kuch aply hoga  */
+        }
+
+        /* UNIVERSAL SELECTOR */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* PSEUDO SELECTOR */
+       
+        a:visited{
+            color: yellow;
+            /* visit krne ke baad color yellow ho jaayega */
+        }
+
+        a:link {
+            color: green;
+            /* Jaha Pe Link Open Krne Ka Option Hoga Uska Color  */
+        }
+
+        a:active{
+            background-color: red;
+        }
+
+        a:hover{
+            background-color: hotpink;
+            /* Link Ke Background Ka Color */
+        }
+
+        p:first-child{
+            background-color: aqua;
+        }
+
+
+    </STYle>
+
+</head>
+
+<body>
+    <div>
+        ELEMENT SELECTOR
+    </div>
+    <div class="red">
+        CLASS SELECTOR
+    </div>
+    <div id="PINK">
+        ID SELECTOR
+    </div>
+
+    <div>
+        <p>CHILD SELECTOR</p>
+    </div>
+
+    <div>
+        <ARTicle>
+            <p>DESCENDENT SELECTOR</p>
+        </ARTicle>
+    </div>
+
+    <a href="https://www.GOOGLE.com">Go To Google</a>
+    <a href="https://facebook2.com">Go To Facebook</a>
+
+
+</body>
+
+</html>
