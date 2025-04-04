@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+
+        /* ye root sabhi jagah pe aplly krne ke liye use hota hai  */
+        :root{
+             --color: rgb(29, 252, 29);
+             --seccolor: rgb(240, 255, 25);
+             /* secondary color  */
+             --defpad: 40px;
+             /* padding ke liye hai  */
+             --defop:0.1;
+             /* opacity ke liye  */
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            /* background-color: aquamarine; */
+            background-color: var(--color);
+        }
+
+        ul{
+            display: flex;
+        }
+
+        ul li{
+            list-style: none;
+            /* opacity: 0.3px; */
+            opacity: var(--defop);
+            list-style: none;
+            /* padding: 40px; */
+            padding: var(--defpad);
+        }
+        
+        ul li:first-child{
+           
+            --color: rgb(255, 0, 0);
+            background-color: var(--color,blue);
+            /* background-color: var(--color,blue); can also use like this agar uper waalo ko hata de to */
+            border: 5px solid var(--color);
+           
+        }
+        .container{
+            /* background-color: greenyellow; */
+            background-color: var(--seccolor);
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi praesentium voluptas nostrum in reiciendis rem deleniti ut adipisci cupiditate animi doloribus eum, reprehenderit delectus eligendi deserunt. Cumque sapiente quo, repudiandae autem obcaecati voluptatum accusamus possimus optio tempora inventore. Culpa quo sint officia molestiae impedit qui.
+    </div>
+</body>
+</html>
