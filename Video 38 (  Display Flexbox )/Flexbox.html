@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            /* ye tabhi apply hoga jab display flex laga hoga  */
+
+            align-items: center;
+            /* uses when we only have 1 lien  */
+            /* align-items: flex-end; */
+            /* align-items: flex-start; */
+            /* ye tabhi centre me aayega jabjustify laga hoga  */
+
+            /* align-content: center; */
+            /* uses when we have 2 or more lines  */
+
+            flex-direction: column;
+            /* upar se neeche kr deta hai  */
+            /* flex-direction: column-reverse; */
+            /* uper waale ko sbse neeche kr deta hai  */
+            flex-direction: row;
+            /* lwft to right le aata hai  */
+            /* flex-direction: row-reverse; */
+            /* right ko sbse pehle aur sbse 1 ko sbse right me  */
+
+            /* flex-wrap: wrap; */
+            /* jab content jyada ho aur wo fit na hore ho to wrap ka use krke unko neeche kr skte hai  */
+            /* flex-wrap: wrap-reverse; */
+
+            /* order of 
+            flex-flow: Flex direction flex wrap; */
+
+            flex-flow: row wrap;
+            /* flex-flow: column wrap; */
+
+            /* gap: 20px; */
+            /* margin ki jagah isko bhi use kr skte hai  */
+
+            /* row-gap: 30px;
+            column-gap: 10px; */
+
+            gap: 40px 20px;
+            /* gap: row coloumn; */
+
+            these all properties use only for container: ;
+        }
+
+        .items {
+            width: 32px;
+            height: 32px;
+            background-color: rgb(102, 216, 216);
+            margin: 4px;
+            color: black;
+            text-align: center;
+            align-content: center;
+            /* flex-grow: 1; */
+        }
+
+        .order1{
+            order: 1;
+        }
+        .order2{
+            order: 3;
+        }
+        .order3{
+            order: 3;
+        }
+        /* jiska order sbse jyada hoga wo end me aayega jiska sbse kam wo pehle aayega  */
+         /* waakiyo me koi order nahi hai isliye wo pehle haikyuki default order 0 hota hai aur jin jin e orderlaga hau hai wo order wise lag jaayenge  */
+
+         .item1{
+            /* flex-grow: 3; */
+            /* ye jitna badhayenge utna ye bada hota jayega */
+
+            /* flex-shrink: 2; */
+            /* jab border ko chota krenge aur jisme shrink 2 hoga to wo 2 guna jyada chota hoga  */
+
+            align-self: baseline;
+            /* ye tb apply hota haijab align content use na kre aur ye sirf kisi ek particular item ke liye use hota hai jab kisi ek ko bs move krna ho tb  */
+         }  
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="items order3">1</div>
+            <div class="items order2">2</div>
+            <div class="items order1">3</div>
+            <div class="items item1">4</div>
+            <div class="items">5</div>
+            <div class="items">6</div>
+            <div class="items">7</div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items">5</div>
+            <div class="items">4</div>
+            <div class="items">3</div>
+            <div class="items">2</div>
+            <div class="items">1</div>
+        </div>
+    </main>
+
+</body>
+
+</html>

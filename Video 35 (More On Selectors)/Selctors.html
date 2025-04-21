@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box:first-child{
+            background-color: red;
+        } */
+
+        /* .box::first-line{
+            isse sirf first line ka color change hoga bas   
+            color: yellow;
+            background-color: red;
+        }*/
+
+        .boxes * {
+            /* star ka mtlb sab me apply hoga universal selector hai   */
+            /* color: red; */
+            border: 2px solid black;
+        }
+
+        p,
+        a,
+        .box,
+        [data-color="primary"] {
+            padding-top: 10px;
+            /* p aur a lagane se sab pe apply hoga  */
+        }
+
+        /* .box:nth-child(odd){
+             iska mtlb sirf odd no.wale pe apply hoga  
+            background-color: aqua;
+        } */
+
+        /* .box:nth-last-child(2){
+            background-color: black;
+            ka mtlb last se 2nd jo hoga uspe apply hoga 
+        } */
+
+        /* bahut imp. hai ye before after */
+        .boxes::before {
+            content: "i am good ";
+            color: ;
+            /* ye class ke pehle type ho jaayega ek headding ki tarah  */
+        }
+
+        .boxes:after {
+            content: "i am better";
+        }
+
+        ::selection {
+            background-color: rgb(77, 204, 255);
+            color: rgb(241, 230, 18);
+            /* ye sirf selected text pe show krega jaise copy krtye wakt selcet lkrte hai waise  */
+        }
+
+        .box::first-letter {
+            color: red;
+            font-size: 30px;
+        }
+
+        input::placeholder {
+            color: aqua;
+            background-color: black;
+            font-size: small;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat aut
+            asperiores labore beatae eum </div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <input type="text" placeholder="Type ur name">
+
+    </div>
+</body>
+
+</html>

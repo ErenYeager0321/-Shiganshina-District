@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            display: grid; Grid Mostly use for layouts  
+            /* grid-template-columns: 120px 100px; */
+            /* isse 2 coloumn ban gye ek 120 ka aur ek 100 ka as u can see left wala jyada jyada chauda hai aur right wala usse kam kyuki left wala 120 ka hai aur right wala 100 ka  */
+
+            /* uper col. ko remove krne se ab sirf 3 row ban jaayengi 100 ki  */
+            grid-template-rows: 100px 100px 100px 100px;
+        }
+
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+
+        item-4{
+             grid-row: 1/2; 
+            /* iska mtlb row 1se 2 ke beech me   */
+            grid-column: 1/2;
+            /* isse item 4 item 1 ki jagah me aa gya   */
+        }
+        item-1{
+            /* grid-row: 1/2;  */
+            /* or i can do  */
+            grid-row-start: 1;
+            grid-row-end: 2;
+            /* iska mtlb row 1se 2 ke beech me  */
+            grid-column: 1/2;
+            /* isse item 4 item 1 ki jagah me aa gya   */
+        } 
+
+        /* aise me dono collapse kr jaayenge ek ke uper ek */
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item5">5</div>
+    </div>
+    <div class="img">
+        <img src="Example OF rows and col..png" width="350" alt="">
+        <img src="Grid Line & Cells.png" width="350" alt="">
+        <img src="Grid Tracks & Area.png" width="350" alt="">
+        <img src="Grid Rows & Coloumns.png" width="350" alt="">
+        <img src="Grid Templates Areas.png" width="350" alt="">
+    </div> 
+</body>
+</html>

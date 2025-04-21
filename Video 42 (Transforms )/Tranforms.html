@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: sandybrown;
+            border: 2px solid black;
+            /* transform: rotate(40deg); */
+            /* transform: rotate(0.5turn); */
+            /* transform: rotateX(40deg); */
+
+            /* transform: rotateX(90deg); */
+            /* poori flat ho gyi hai to ab dikhi hi nai rhi  */
+            /* transform: rotateY(90deg); */
+            /* transform: rotateZ(90deg); */
+            
+            transform: scale(1.6);
+            transform: scaleX();
+            transform: scaleY();
+            transform: scaleZ();
+            transform: scale(0 0 0);
+            /* mtlb ye 1.6times bda ho jaayega */
+
+            transform: skew(10deg);
+            transform: skewX();
+            transform: skewY();
+            /* it doesnt apply on Z axis  */
+
+            /* transform: translate(80px); */
+            /* transform: translate(80%); */
+            /* transform: translateX(80%); */
+            transform: translateY(80%);
+            /* Translate use to move the item  */
+
+            transform: translate(20px) skew(30deg) rotate(30deg) scale(1.5);
+            /* ye sab ek sath bhi apply kr skte hai */
+
+            /* For Origin  */
+            transform: rotate(1.25turn);
+            transform: origin(0% 0%);
+            /* ye jitne pe select hoga uss point pe bpcx rotate krega */
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid black;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+    </div>
+</body>
+</html>

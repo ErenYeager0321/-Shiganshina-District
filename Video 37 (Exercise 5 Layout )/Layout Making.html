@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        * {
+            margin: 0;
+            font-family: "Poppins", sans-serif ;
+            
+        }
+
+        header {
+            position: sticky;
+            z-index: 2;
+            top: 0;
+        }
+
+        nav {
+            /* border: 1px solid rgb(13, 198, 75); */
+            background-color: rgb(248, 39, 108);
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 15px;
+            margin: 0;
+            height: 35px;
+        }
+
+        ul li {
+            
+            list-style: none;
+            display: inline;
+            font-weight:800;
+            font-size: 25px;
+            padding: 15px;
+        }
+
+        .boxes {
+            border: 2px solid black;
+            background-color: rgb(0, 255, 76);
+            display: inline-flex;
+            width: 1083px;
+            height: 450px;
+            margin: 40;
+            padding: 0;
+            position: relative;
+            justify-content: center;
+
+        }
+
+        .box {
+            width: 410px;
+            /* height: 281px; */
+            margin-top: 30px;
+            margin: 60px 20px 60px 20px;
+            padding: 20px;
+
+        }
+
+        .box1 {
+            border: 2px solid black;
+            background-color: rgb(247, 255, 15);
+            /* width: 200px;
+            height: 200px; */
+            /* margin: 20px;
+            padding: 20px; */
+        }
+
+        .box2 {
+            border: 2px solid black;
+            background-color: rgb(247, 255, 15);
+            /* width: 200px;
+            height: 200px; */
+            /* margin: 20px;
+            padding: 20px; */
+
+        }
+
+        .box3 {
+            background-color: aquamarine;
+            border: 2px solid black;
+            margin: 20px 0px 25px 243px;
+            width: 619px;
+            height: 150px;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+            color: white;
+            padding-top: 10px;
+
+        }
+
+        .symbol-box {
+            width: 20px;
+            height: 20px;
+            background-color: rgb(247, 255, 7);
+            position: fixed;
+            bottom: 11px;
+            right: 12px;
+            border-radius: 60px;
+            img{
+                border-radius: 60px;
+                width: 20px;
+            }
+        }
+
+
+        footer{
+            background-color: rgb(44, 174, 255);
+            height: 50px;
+        }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+            </ul> 
+        </nav>
+    </header>
+
+    <main>
+        <div class="boxes">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+        </div>
+
+        <div class="box3">
+            <p> Hey its my layout pracitce its the first time so thats why its not</p>
+        </div>
+        <div class="symbol-box">
+            <img src="EREN.jpg" width="30" alt="">
+        </div>
+    </main> 
+
+    <footer>
+        
+    </footer>
+</body>
+
+</html>

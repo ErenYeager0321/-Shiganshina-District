@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area</title>
+    <style>
+    .container{
+        width: 80vw;
+        height: 100vh;
+        border: 2px solid black;
+        display: grid;
+        /* grid-template-areas: "nav nav nav"
+                           /* iska mtlb teeno row me nav ke liye jagah chootegi  */
+                /* "side article article"
+                "footer footer footer"; */
+
+        /* grid-template-columns: 1fr 2fr 1fr;  */
+        grid-template-columns: repeat(4,1fr);
+        /* iska mtlb 1fr 4 baar repaet hoga   */
+
+        grid-template-columns: repeat(4, minmax(100px,1fr));
+        /* iska mtlb sbme (4 likha hai to 4 baar hi repest hoga0) minimum 100 width jaayegi aur maximum 1fr */
+
+        /* grid-template-columns: repeat(4, 40px); */
+        /* aise me box container ke bahr chala jaaayega kyuki width kamhai  */
+
+        gap: 34px;
+        row-gap: 10px;
+        column-gap: 20px;
+        /* isme padding ya margin use nai krenge */
+        /* justify-items: center;
+        align-items: center; */
+
+        /* justify-content: center;
+        align-content: center; */
+        /* content aur item me fark ye ha ki item me wo sir aopne cell ke andar adjust higa aur content me wo poore container ke andar adjust hoga aur content tab use krenge jab container bada ho aur grid choti */
+
+        place-content: center;
+        /* ye justify aur align dono ka kaam krta hai  */
+    }
+
+    .item{
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+            
+        }
+
+         /* .item-1{
+            grid-area: nav;
+            background-color: aqua;
+        } */
+         .item-2{
+            grid-area: side;
+            background-color:aquamarine ;
+            /* justify-self: end;
+            align-self: start;
+        }  */
+        /* .item-3{
+            grid-area: article;
+            background-color: bisque;
+        }
+        .item-4{
+            grid-area: footer;
+            background-color: cadetblue;
+        }
+        .item-5{
+            grid-area: nav;
+             isse 5 1 ke uper aa jayega  
+            
+        } */
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float & Cleard</title>
+    <style>
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
+            /* dono border jo sath me mil gye the wo dur ho jaayenge */
+        }
+
+        img{
+            float: right;
+            /* content ko right me shift kr deta hai photo ke  */
+        }
+
+        .card{
+            border: 2px solid red;
+        }
+        .card:nth-child(3){
+            /* yaha nth child 3 choose kiya mtlb div ke andar ka 3rd element agr 2nd choose krte card 1 aata agar 1 use krte to img choose hoti */
+            background-color: red;
+            color: yellow;
+            clear: right;
+            /* ye 2nd para ke border se photo hata dega */
+            clear: both;
+            /* dono side allow nai krega photo ko both choose krne me  */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img width="230"  src="https://wallpapers-clan.com/wp-content/uploads/2025/04/anime-girl-teal-hair-looking-back-hoodie-desktop-wallpaper-preview.jpg" alt="">
+
+        <div class="card">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla possimus tempore laboriosam mollitia veritatis nobis aut voluptatibus perspiciatis molestias impedit.
+
+        </div>
+        <!-- lorem 200 krne par bhi photo wahi hai uss photo ko hataane ke liye "clear" prop. ude krenge -->
+
+        <div class="card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, atque enim dolorem iste maxime vitae aliquam magnam maiores ipsa rem debitis veniam eum, nesciunt sequi ducimus non, deleniti hic quae iure mollitia! Placeat rem omnis porro illum consectetur qui sequi voluptatum. Voluptates et nisi quam omnis totam cum nam qui, error eum quae architecto dolorum, quibusdam maiores? Possimus rem ab hic! Assumenda aspernatur illo ad, praesentium modi dicta illum dolore laboriosam cumque necessitatibus quod debitis voluptas iusto itaque magnam quis explicabo nihil. Nostrum, saepe. Dolorum nam adipisci ducimus modi aliquam corporis dolor, saepe aspernatur optio similique accusamus rerum assumenda debitis? Iste ducimus reiciendis possimus eaque quae repudiandae, dolorem, eos labore mollitia illo ullam ea repellat excepturi molestiae ipsam necessitatibus tenetur. Ex unde maxime iusto! Beatae accusantium commodi blanditiis optio ratione rem modi nemo culpa sint, tempore iure neque, consequuntur quis nesciunt sapiente cupiditate exercitationem autem assumenda. Sapiente, aut vel! Sed voluptates, hic minus necessitatibus illum, ipsum odio quia beatae consequatur, quis excepturi magnam ducimus ipsam molestias facere. Numquam natus quod molestiae eligendi consequuntur provident architecto error, ullam optio in dolores cupiditate blanditiis odit officia ut doloremque commodi exercitationem reprehenderit nobis a unde ipsa, perspiciatis at pariatur. Voluptatibus facere corrupti dolore.</div>
+        <div class="card">card 3</div>
+    </div>
+</body>
+</html>

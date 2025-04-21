@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        body{
+            background-color: yellow;
+        }
+
+        @media only screen and (max-width: 455px) {
+            body{
+                background-color: red;
+
+                /* idhar max width ka mtlb hai ki agar width 300 se jyada hui to color yellow apply hoga agr screen wisth 300 se kam hai to red apply hoga  */
+            }
+
+            .boxes{
+                flex-direction: column;
+            }
+
+            /* ye aur neeche flex lagane se ye hota hai ki box agar choti screen me dikhega to wo coloums me show krega agar pc hai to inline show krenge aur ye max width pe depend krega */
+        }
+
+        /* @media only screen and (orientation: landscape) {
+
+        }
+
+        @media only screen and (orientation: portrait) {
+            
+        } */
+
+        /* @media only screen and (min-width: 300px) {
+            body{
+                background-color: red;
+
+                /* idhar max width ka mtlb hai ki agar width 300 se jyada hui to color yellow apply hoga agr screen wisth 300 se kam hai to red apply hoga  */
+
+                /* idhar pe  min width ka mtlb hai ki agar wisth 300 se jyada hui color red apply hoga aagr 300 se ka hui to yellow apply hoga  */
+            } 
+        }
+        /* .boxes{
+            flex-direction: column;
+        }
+        */
+        
+
+        .boxes{
+            display: flex;
+            
+        }  
+        
+        .box{
+            width: 344px;
+            height: 344px;
+            background-color: steelblue;
+            margin: 3px;
+            padding: 3px;
+
+        }
+            
+    </style>
+</head>
+<body>
+    its a body
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
