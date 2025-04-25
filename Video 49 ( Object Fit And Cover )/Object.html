@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object Fit & Cover</title>
+    <style>
+        .container{
+            /* background-color: antiquewhite; */
+            border: 2px solid black;
+            width: 500px;
+            height: 400px;
+
+            background-image: url(https://imgs.search.brave.com/3HiHUNx5IdAHvGMgsSf5y5ti1ukAbCuvBJdLO2az3CI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3ZpdGUvYXNz/ZXRzL3Bob3RvLUM4/cTBLUUhHLndlYnA);
+
+            /* background-size: cover; ye image ko container ke size me fit karega, cover me ye image ko crop kar deta hai uske with height me ache se dikhane ke liye chaaro taraf se */
+            /* agar Image choti rhi to wo repeat hoogi uske liye background repeat prop. use krenge */
+
+            /* background-position: center center; */
+
+            background-repeat: no-repeat; /* ye image ko repeat hone se roke ga, agar nahi diya to image repeat ho jayegi */
+            /* background-repeat: repeat; */
+            /* background-repeat: repeat-x; */
+            background-clip: border-box;
+            /* background-clip: padding-box;
+            background-clip: content-box; ye image ko content box me dikhayega, border-box me nahi dikhayega */
+
+        }
+
+        img{
+            width: 300px;
+            height: 250px;
+            /* object-fit: cover; cover, contain, fill, none, scale-down */
+
+            object-fit: contain; /*isme ye poori image ko dikhayega, cover me ye image ko crop kar deta hai uske with height me ache se dikhane ke liye chaaro taraf se */
+
+            object-position: center; /*isme ye image ko center me dikhayega, left, right, top, bottom, top left, top right, bottom left, bottom right me bhi kar sakte hai */
+            object-position: 10px 20px; /* innko badha kar img ko kahi par bhi move kr skte hai, isme ye image ko 10px left aur 20px top me dikhayega */       
+
+            object-position: top right;  
+            /* object-position: top left;
+            object-position: bottom left;  
+            object-position: bottom right; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://wallpapers.com/images/featured/ghibli-3arediav4xa0a1vm.jpg" alt=""> -->
+    </div>
+</body>
+</html>

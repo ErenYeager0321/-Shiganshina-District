@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+        img {
+            /* filter: blur(5px); ye image ko blur karega, isme 0px se lekar 100px tak de sakte hai, jitna zyada hoga utna zyada blur hoga */
+        }
+
+        .img1 {
+            filter: brightness(0.5);
+            /* ye image ki brightness ko kam karega, isme 0 se lekar 1 tak de sakte hai, jitna kam hoga utna zyada dark hoga */
+            filter: contrast(0.5);
+            /* ye image ki contrast ko kam karega, isme 0 se lekar 1 tak de sakte hai, jitna kam hoga utna zyada dark hoga */
+
+            filter: drop-shadow(5px 5px 5px black);
+            /* ye image ke niche shadow dega, isme 0 se lekar 100px tak de sakte hai, jitna zyada hoga utna zyada shadow hoga */
+
+            /* filter: grayscale(1); ye image ko black and white karega, isme 0 se lekar 1 tak de sakte hai, jitna zyada hoga utna zyada black and white hoga */
+
+            /* filter: hue-rotate(90deg); ye image ke color ko rotate karega, isme 0 se lekar 360deg tak de sakte hai, jitna zyada hoga utna zyada color change hoga */
+
+            /* filter: opacity(1)); */
+
+        }
+
+        .img2 {
+            /* <filter-function> values */
+            filter: blur(5px);
+            filter: brightness(0.4);
+            filter: contrast(200%);
+            filter: drop-shadow(16px 16px 20px blue);
+            filter: grayscale(50%);
+            filter: hue-rotate(90deg);
+            filter: invert(75%);
+            filter: opacity(25%);
+            filter: saturate(30%);
+            filter: sepia(60%);
+
+            /* URL */
+            filter: url("filters.svg#filter-id");
+
+            /* Multiple filters */
+            filter: contrast(175%) brightness(3%);
+            filter: drop-shadow(3px 3px red) sepia(100%) drop-shadow(-3px -3px blue);
+
+            /* Use no filter */
+            filter: none;
+
+            /* Global values */
+            filter: inherit;
+            filter: initial;
+            filter: revert;
+            filter: revert-layer;
+            filter: unset;
+        }
+
+        .img3 {}
+    </style>
+</head>
+
+<body>
+    <img class="img" src="4d50c1d7786cc2c2bac75.jpghttps://i.pinimg.com/736x/60/63/da/6063da10745" alt="">
+
+    <img class="img1" src="https://i.pinimg.com/474x/f7/a1/f9/f7a1f9a1677ffd72f73393e090786878.jpg" alt="">
+
+    <img class="img2" src="https://i.pinimg.com/736x/73/eb/04/73eb04196a11ef1173bd0782104588e5.jpg" alt="">
+
+    <img class="img3" src="https://i.pinimg.com/736x/ac/2b/e3/ac2be32d7557cb9ae83aeed111988479.jpg" alt="">
+</body>
+
+</html>
